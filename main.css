@@ -1,0 +1,68 @@
+@import url(./components/topnav.css);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(./assets/img/background/sea.jpg);
+	background-size: cover;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+.mask {
+    position: absolute;
+
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+}
+
+body>.mask {
+    background-color: burlywood;
+    opacity: 70%;
+}
+
+.container_box {
+    position: absolute;
+
+    border: 0.5rem dotted dodgerblue;
+    border-radius: 2rem;
+
+    top: 10%;
+    bottom: 5%;
+}
+
+.container_box>.mask {
+    border-radius: 2rem;
+    background-color: aqua;
+    opacity: 60%;
+}
+
+#displayer {
+    left: 30%;
+    right: 5%;
+}
+
+#showing_bar {
+    left: 5%;
+    right: 75%;
+}
+
+#main_canvas {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 5%;
+    bottom: 5%;
+
+    width: 90%;
+    height: 90%;
+
+    border: 0.1rem solid black;
+}
