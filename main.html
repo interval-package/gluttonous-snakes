@@ -27,12 +27,20 @@
     <div class="mask"></div>
     <div class="container_box" id="displayer">
         <div class="mask"></div>
-        <canvas id="main_canvas">
-
-        </canvas>
+        <!-- multi layer -->
+        <div class="main_canvas" id="background_drawer">
+            <div class="map" id="map"></div>
+        </div>
     </div>
     <div class="container_box" id="showing_bar">
         <div class="mask"></div>
     </div>
 </body>
+
+
+<script src="./actions/snake.js"></script>
+<script src="./actions/food.js"></script>
+<script src="./actions/grid.js"></script>
+<script src="./main.js"></script>
+
 </html>
