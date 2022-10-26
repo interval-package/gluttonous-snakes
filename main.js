@@ -1,9 +1,11 @@
-
-
 var snake = new Snake();
-var food = new Food();
+// var food = new Food();
+var foods = [new Food(), new Food(), new Food()];
 snake.display();   // 初始化显示
-food.display();
+for(i in foods){
+    foods[i].display();
+}
+
 
 // 给body加按键事件，上下左右
 document.body.onkeydown = function(e) {
@@ -41,5 +43,5 @@ var timer;
 begin.onclick = function() {
     clearInterval(timer);
     // timer = setInterval(snake.run(), 500);   // 先执行run函数，把执行得到的结果，每500毫秒执行一次，不会在执行内部代码
-    timer = setInterval("snake.run()", 100);  // 小技巧，每500毫秒执行字符串，字符串执行内部代码
+    timer = setInterval("snake.run(foods)", 100);  // 小技巧，每500毫秒执行字符串，字符串执行内部代码
 };
