@@ -79,7 +79,15 @@ body>.mask {
 }
 
 .map {
-    width: 100;
-    height: 100;
-    border: 1rem solid black;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+#start {
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    top: 20%;
+    border-radius: 1rem;
 }

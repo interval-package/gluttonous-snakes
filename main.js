@@ -6,6 +6,9 @@ for(i in foods){
     foods[i].display();
 }
 
+// var map = document.getElementById("map");
+// map.style.width = snake.width * snake.bound_x + "px";
+// map.style.height = snake.height * snake.bound_y + "px";
 
 // 给body加按键事件，上下左右
 document.body.onkeydown = function(e) {
@@ -37,11 +40,13 @@ document.body.onkeydown = function(e) {
     }
 };
 
+var speed_up_rate = 1.5;
+var interval = 100;
 // 点击开始时，动起来
-var begin = document.getElementById('showing_bar');
+var begin = document.getElementById('start');
 var timer;
 begin.onclick = function() {
     clearInterval(timer);
     // timer = setInterval(snake.run(), 500);   // 先执行run函数，把执行得到的结果，每500毫秒执行一次，不会在执行内部代码
-    timer = setInterval("snake.run(foods)", 100);  // 小技巧，每500毫秒执行字符串，字符串执行内部代码
+    timer = setInterval("snake.run(foods)",interval);  // 小技巧，每500毫秒执行字符串，字符串执行内部代码
 };

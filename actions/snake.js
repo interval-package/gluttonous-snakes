@@ -2,8 +2,8 @@ function Snake(){
     // var this = this;
     var map = document.getElementById('map');
 
-    this.bound_x = 100;
-    this.bound_y = 100;
+    this.bound_x = 80;
+    this.bound_y = 40;
 
     // 设置蛇的宽、高、默认走的方向
     this.width = 10;
@@ -65,12 +65,18 @@ function Snake(){
             // 清除食物,重新生成食物
             map.removeChild(tar.flag);
             tar.display();
+
+            console.log("eating!")
+
+            interval /= speed_up_rate;
+            clearInterval(timer);
+            timer = setInterval("snake.run(foods)",interval)
         }
     }
 
     this.restart = function(){
         clearInterval(timer);   // 清除定时器，
-        alert("you are die");
+        alert("you die");
         // 删除旧的
         this.clear();
         this.body = [   // 回到初始状态，
